@@ -1,0 +1,249 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.sidebar {
+    background-color: #2d3e50;
+    color: white;
+    padding: 30px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #4CAF50;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.main-content {
+    margin-left: 30px;
+    flex-grow: 1;
+}
+
+.content-section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.book-appointment-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.book-appointment-link:hover {
+    background-color: #e9f8e1;
+    border-radius: 4px;
+}
+
+#search input,
+#search button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#search input:focus,
+#search button:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+#search button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search button:hover {
+    background-color: #45a049;
+}
+
+#results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+#results-table th,
+#results-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#results-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+#results-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+#no-results {
+    text-align: center;
+    color: red;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with transparency */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Fields */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+

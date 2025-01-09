@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telehealth Options Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Telehealth Dashboard</h2>
+      <ul>
+        <li><a href="#" id="search-toggle">Search Providers</a></li>
+        <li><a href="#" id="appointments-toggle">Book Appointment</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <section id="search" class="content-section" style="display: block;">
+        <h2>Search Telehealth Providers</h2>
+        <form id="search-form">
+          <label for="medical_condition">Medical Condition:</label>
+          <input type="text" id="medical_condition" name="medical_condition" placeholder="e.g., Cancer, Obesity">
+
+          <label for="doctor">Doctor:</label>
+          <input type="text" id="doctor" name="doctor" placeholder="e.g., Matthew Smith">
+
+          <label for="hospital">Hospital:</label>
+          <input type="text" id="hospital" name="hospital" placeholder="e.g., Sons and Miller">
+
+          <label for="insurance_provider">Insurance Provider:</label>
+          <input type="text" id="insurance_provider" name="insurance_provider" placeholder="e.g., Blue Cross">
+        
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="e.g., Los Angeles">
+
+          <button type="button" id="search-button">Search</button>
+        </form>
+
+        <div id="results">
+          <table id="results-table">
+            <thead>
+              <tr>
+                <th>Medical Condition</th>
+                <th>Doctor</th>
+                <th>Hospital</th>
+                <th>Insurance Provider</th>
+                <th>Location</th>
+                <th>Book Appointment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table rows will be dynamically added here -->
+            </tbody>
+          </table>
+          <p id="no-results" style="display:none;">No providers match your criteria.</p>
+        </div>
+      </section>
+
+      <!-- Modal for Booking Appointment -->
+    <!-- Modal for Booking Appointment -->
+<div id="appointment-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2>Book Appointment</h2>
+      <form id="appointment-form">
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" required>
+
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required>
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+          </select>
+
+          <label for="blood-group">Blood Group:</label>
+          <input type="text" id="blood-group" name="blood-group" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="urgency">Urgency Level:</label>
+          <select id="urgency" name="urgency" required>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+          </select>
+
+          <button type="submit" id="book-appointment-button">Book Appointment</button>
+      </form>
+  </div>
+</div>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2024 Telehealth Dashboard. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
